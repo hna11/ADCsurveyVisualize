@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 16px;
+        }
+
+            a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+        .previous {
+            background-color: #04AA6D;
+            color: black;
+        }
+
+        body {
+            background-image: url('img/00.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: cursive
+        }
+
+        .slidecontainer {
+            width: 80%;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 50%;
+            height: 11px;
+            border-radius: 15px;
+            background: black;
+            outline: none;
+            opacity: 0.6;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+            .slider:hover {
+                opacity: 1;
+            }
+
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 25px;
+                height: 30px;
+                border-radius: 50%;
+                background: greenyellow;
+                cursor: pointer;
+            }
+    </style>
+    <title>Home Work 7</title>
+    <link rel="stylesheet" href="slider.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+    <div class="background-color-layer" style="background-image: url('img/00.jpg')"></div>
+    <div>
+        <h1 style="font-family: cursive;color: darkblue;">Home Work 7</h1>
+        <h2 style="font-family: cursive;color: greenyellow;">SchreierFOMvsSpeed-ISSCC</h2>
+    </div>
+    <div class="slidecontainer">
+        <input type="range" min="1997" max="2021" value="1" class="slider" id="myRange">
+    </div>
+    <svg width="900" height="500"></svg>
+    <script src='01/SchreierFOMvsSpeed/ISSCC/jsLearning.js'></script>
+
+
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+    </script>
+    <a href="index.html" class="previous">&laquo; Home</a>
+
+
+</body>
+</html>
